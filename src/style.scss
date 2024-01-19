@@ -1,18 +1,26 @@
 // Define color variables
-$primaryColor: #fffea7;
+$primaryColor: #fcfbbd;
 $secondaryColor: #81671e;
-$accentColor: #e3f1bc;
-$backgroundDark: #857c49;
+$ShoverColor:rgb(122, 117, 11);
+$accentColor: #ffd667;
+$backgroundDark: #8b824d;
 $backgroundDark1: #52502d;
 $backgroundLight: #f0eab2;
 $inputBorder: #ffe0a7;
 $inputPlaceholder: rgb(175, 175, 175);
 $hoverColor: #52502d;
-$buttonBg: #8d8a5b;
+$buttonBg: #918d61;
 $searchBorder: gray;
-$lightGray: lightgray;
+$lightGray: rgb(216, 216, 216);
 $ownerMessageBg: #e0c056;
 $ownerMessageText: white;
+
+*{
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
 
 @mixin mobile {
     @media screen and (max-width: 480px) {
@@ -79,6 +87,10 @@ $ownerMessageText: white;
         font-weight: bold;
         border: none;
         cursor: pointer;
+
+        &:hover {
+          background-color: $ShoverColor;
+        }
       }
 
       label {
@@ -120,9 +132,14 @@ $ownerMessageText: white;
     @include tablet {
       width: 90%;
     }
+    @include mobile{
+        width: 100%;
+        height: 90%;   
+    }
 
     .sidebar {
       flex: 1;
+      
       background-color: $backgroundDark;
       position: relative;
 
@@ -214,8 +231,16 @@ $ownerMessageText: white;
             font-size: 14px;
             color: $lightGray;
           }
+
+        
         }
       }
+      @include mobile{
+        flex:none;
+        width: 30%;
+        overflow: hidden;           
+        
+    }
     }
     .chat {
       flex: 2;
@@ -338,6 +363,13 @@ $ownerMessageText: white;
           }
         }
       }
+
+      @include mobile{
+        flex:none;
+        width:70%;
+        
+    }
     }
   }
+
 }
