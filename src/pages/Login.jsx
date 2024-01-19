@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import Add from '../img/addAvatar.png'
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { auth, db, storage } from "../firebase";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { doc, setDoc } from "firebase/firestore";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth} from "../firebase";
 import { useNavigate, Link } from "react-router-dom";
 
 

@@ -3,7 +3,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import './style.scss';
 import { useContext } from 'react';
-import { BrowserRouter as Router, Switch,Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
+import { BrowserRouter as Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
 import { AuthContext } from './context/AuthContext';
 
 function App() {
